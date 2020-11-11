@@ -119,7 +119,7 @@ with trange(args.epochs) as progress_bar1:
         # TRAIN TILL THE END OF TRAINING INTERACTION IDX
         with trange(train_end_idx) as progress_bar2:
             for j in progress_bar2:
-                progress_bar2.set_description('Processed %dth interactions' % j)
+                # progress_bar2.set_description('Processed %dth interactions' % j)
 
                 if is_first_epoch:
                     # READ INTERACTION J
@@ -163,7 +163,7 @@ with trange(args.epochs) as progress_bar1:
 
                     with trange(len(lib.current_tbatches_user)) as progress_bar3:
                         for i in progress_bar3:
-                            progress_bar3.set_description('Processed %d of %d T-batches ' % (i, len(lib.current_tbatches_user)))
+                            # progress_bar3.set_description('Processed %d of %d T-batches ' % (i, len(lib.current_tbatches_user)))
                             
                             total_interaction_count += len(lib.current_tbatches_interactionids[i])
 
