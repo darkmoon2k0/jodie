@@ -207,7 +207,7 @@ with trange(train_end_idx, test_end_idx) as progress_bar:
 validation_predicted_y = np.array(validation_predicted_y)
 test_predicted_y = np.array(test_predicted_y)
 
-with open('test_predicted_y.txt', 'wb') as f:
+with open('test_predicted_y.npy', 'wb') as f:
     np.save(f, test_predicted_y)
     
 performance_dict = dict()
